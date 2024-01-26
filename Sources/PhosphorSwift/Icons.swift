@@ -10,18 +10,7 @@ import SwiftUI
 
 public enum Ph: String, CaseIterable, Identifiable {
     public var id: Self { self }
-    
-    public enum IconWeight: String, CaseIterable, Identifiable {
-        public var id: Self { self }
-        
-        case regular
-        case thin
-        case light
-        case bold
-        case fill
-        case duotone
-    }
-
+  
     case addressBook = "address-book"
     case airTrafficControl = "air-traffic-control"
     case airplane
@@ -1270,27 +1259,4 @@ public enum Ph: String, CaseIterable, Identifiable {
     case xSquare = "x-square"
     case yinYang = "yin-yang"
     case youtubeLogo = "youtube-logo"
-
-    public var regular: Image { return Image(self.rawValue, bundle: .module) }
-
-    public var thin: Image { return Image("\(self.rawValue)-thin", bundle: .module) }
-
-    public var light: Image { return Image("\(self.rawValue)-light", bundle: .module) }
-
-    public var bold: Image { return Image("\(self.rawValue)-bold", bundle: .module) }
-
-    public var fill: Image { return Image("\(self.rawValue)-fill", bundle: .module) }
-
-    public var duotone: Image { return Image("\(self.rawValue)-duotone", bundle: .module) }
-    
-    public func weight(_ weight: IconWeight) -> Image {
-        switch weight {
-        case .regular: return self.regular
-        case .thin: return self.thin
-        case .light: return self.light
-        case .bold: return self.bold
-        case .fill: return self.fill
-        case .duotone: return self.duotone
-        }
-    }
 }

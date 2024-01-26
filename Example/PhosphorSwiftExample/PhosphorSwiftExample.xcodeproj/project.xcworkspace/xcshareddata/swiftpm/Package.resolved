@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "gridstack",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/pietropizzi/GridStack",
+      "state" : {
+        "revision" : "777c3b9d789d377033d8e4c8f99f9d0a04485dc4",
+        "version" : "0.4.3"
+      }
+    }
+  ],
+  "version" : 2
+}

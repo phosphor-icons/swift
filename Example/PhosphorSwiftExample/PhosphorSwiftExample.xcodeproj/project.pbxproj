@@ -1,0 +1,627 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 60;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BE2240042B631EAD006E71A2 /* PhosphorSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BE2240032B631EAD006E71A2 /* PhosphorSwift */; };
+		BE4B1B032B62305E0081D1E3 /* PhosphorSwiftExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4B1B022B62305E0081D1E3 /* PhosphorSwiftExampleApp.swift */; };
+		BE4B1B052B62305E0081D1E3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4B1B042B62305E0081D1E3 /* ContentView.swift */; };
+		BE4B1B072B62305E0081D1E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE4B1B062B62305E0081D1E3 /* Assets.xcassets */; };
+		BE4B1B0A2B62305E0081D1E3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE4B1B092B62305E0081D1E3 /* Preview Assets.xcassets */; };
+		BE4B1B152B62305F0081D1E3 /* PhosphorSwiftExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4B1B142B62305F0081D1E3 /* PhosphorSwiftExampleTests.swift */; };
+		BE4B1B1F2B62305F0081D1E3 /* PhosphorSwiftExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4B1B1E2B62305F0081D1E3 /* PhosphorSwiftExampleUITests.swift */; };
+		BE4B1B212B62305F0081D1E3 /* PhosphorSwiftExampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4B1B202B62305F0081D1E3 /* PhosphorSwiftExampleUITestsLaunchTests.swift */; };
+		BE4B1B322B623AC30081D1E3 /* GridStack in Frameworks */ = {isa = PBXBuildFile; productRef = BE4B1B312B623AC30081D1E3 /* GridStack */; };
+		BEA59BBB2B6255EA00D27414 /* PhosphorSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BEA59BBA2B6255EA00D27414 /* PhosphorSwift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BE4B1B112B62305F0081D1E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE4B1AF72B62305E0081D1E3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BE4B1AFE2B62305E0081D1E3;
+			remoteInfo = PhosphorSwiftExample;
+		};
+		BE4B1B1B2B62305F0081D1E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE4B1AF72B62305E0081D1E3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BE4B1AFE2B62305E0081D1E3;
+			remoteInfo = PhosphorSwiftExample;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BE4B1AFF2B62305E0081D1E3 /* PhosphorSwiftExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhosphorSwiftExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE4B1B022B62305E0081D1E3 /* PhosphorSwiftExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhosphorSwiftExampleApp.swift; sourceTree = "<group>"; };
+		BE4B1B042B62305E0081D1E3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		BE4B1B062B62305E0081D1E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BE4B1B092B62305E0081D1E3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BE4B1B0B2B62305E0081D1E3 /* PhosphorSwiftExample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PhosphorSwiftExample.entitlements; sourceTree = "<group>"; };
+		BE4B1B102B62305F0081D1E3 /* PhosphorSwiftExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhosphorSwiftExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE4B1B142B62305F0081D1E3 /* PhosphorSwiftExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhosphorSwiftExampleTests.swift; sourceTree = "<group>"; };
+		BE4B1B1A2B62305F0081D1E3 /* PhosphorSwiftExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhosphorSwiftExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE4B1B1E2B62305F0081D1E3 /* PhosphorSwiftExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhosphorSwiftExampleUITests.swift; sourceTree = "<group>"; };
+		BE4B1B202B62305F0081D1E3 /* PhosphorSwiftExampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhosphorSwiftExampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BE4B1AFC2B62305E0081D1E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE4B1B322B623AC30081D1E3 /* GridStack in Frameworks */,
+				BEA59BBB2B6255EA00D27414 /* PhosphorSwift in Frameworks */,
+				BE2240042B631EAD006E71A2 /* PhosphorSwift in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE4B1B0D2B62305F0081D1E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE4B1B172B62305F0081D1E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BE4B1AF62B62305E0081D1E3 = {
+			isa = PBXGroup;
+			children = (
+				BE4B1B012B62305E0081D1E3 /* PhosphorSwiftExample */,
+				BE4B1B132B62305F0081D1E3 /* PhosphorSwiftExampleTests */,
+				BE4B1B1D2B62305F0081D1E3 /* PhosphorSwiftExampleUITests */,
+				BE4B1B002B62305E0081D1E3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BE4B1B002B62305E0081D1E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BE4B1AFF2B62305E0081D1E3 /* PhosphorSwiftExample.app */,
+				BE4B1B102B62305F0081D1E3 /* PhosphorSwiftExampleTests.xctest */,
+				BE4B1B1A2B62305F0081D1E3 /* PhosphorSwiftExampleUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BE4B1B012B62305E0081D1E3 /* PhosphorSwiftExample */ = {
+			isa = PBXGroup;
+			children = (
+				BE4B1B022B62305E0081D1E3 /* PhosphorSwiftExampleApp.swift */,
+				BE4B1B042B62305E0081D1E3 /* ContentView.swift */,
+				BE4B1B062B62305E0081D1E3 /* Assets.xcassets */,
+				BE4B1B0B2B62305E0081D1E3 /* PhosphorSwiftExample.entitlements */,
+				BE4B1B082B62305E0081D1E3 /* Preview Content */,
+			);
+			path = PhosphorSwiftExample;
+			sourceTree = "<group>";
+		};
+		BE4B1B082B62305E0081D1E3 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				BE4B1B092B62305E0081D1E3 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BE4B1B132B62305F0081D1E3 /* PhosphorSwiftExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				BE4B1B142B62305F0081D1E3 /* PhosphorSwiftExampleTests.swift */,
+			);
+			path = PhosphorSwiftExampleTests;
+			sourceTree = "<group>";
+		};
+		BE4B1B1D2B62305F0081D1E3 /* PhosphorSwiftExampleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BE4B1B1E2B62305F0081D1E3 /* PhosphorSwiftExampleUITests.swift */,
+				BE4B1B202B62305F0081D1E3 /* PhosphorSwiftExampleUITestsLaunchTests.swift */,
+			);
+			path = PhosphorSwiftExampleUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BE4B1AFE2B62305E0081D1E3 /* PhosphorSwiftExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE4B1B242B62305F0081D1E3 /* Build configuration list for PBXNativeTarget "PhosphorSwiftExample" */;
+			buildPhases = (
+				BE4B1AFB2B62305E0081D1E3 /* Sources */,
+				BE4B1AFC2B62305E0081D1E3 /* Frameworks */,
+				BE4B1AFD2B62305E0081D1E3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PhosphorSwiftExample;
+			packageProductDependencies = (
+				BE4B1B312B623AC30081D1E3 /* GridStack */,
+				BEA59BBA2B6255EA00D27414 /* PhosphorSwift */,
+				BE2240032B631EAD006E71A2 /* PhosphorSwift */,
+			);
+			productName = PhosphorSwiftExample;
+			productReference = BE4B1AFF2B62305E0081D1E3 /* PhosphorSwiftExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BE4B1B0F2B62305F0081D1E3 /* PhosphorSwiftExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE4B1B272B62305F0081D1E3 /* Build configuration list for PBXNativeTarget "PhosphorSwiftExampleTests" */;
+			buildPhases = (
+				BE4B1B0C2B62305F0081D1E3 /* Sources */,
+				BE4B1B0D2B62305F0081D1E3 /* Frameworks */,
+				BE4B1B0E2B62305F0081D1E3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BE4B1B122B62305F0081D1E3 /* PBXTargetDependency */,
+			);
+			name = PhosphorSwiftExampleTests;
+			productName = PhosphorSwiftExampleTests;
+			productReference = BE4B1B102B62305F0081D1E3 /* PhosphorSwiftExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BE4B1B192B62305F0081D1E3 /* PhosphorSwiftExampleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE4B1B2A2B62305F0081D1E3 /* Build configuration list for PBXNativeTarget "PhosphorSwiftExampleUITests" */;
+			buildPhases = (
+				BE4B1B162B62305F0081D1E3 /* Sources */,
+				BE4B1B172B62305F0081D1E3 /* Frameworks */,
+				BE4B1B182B62305F0081D1E3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BE4B1B1C2B62305F0081D1E3 /* PBXTargetDependency */,
+			);
+			name = PhosphorSwiftExampleUITests;
+			productName = PhosphorSwiftExampleUITests;
+			productReference = BE4B1B1A2B62305F0081D1E3 /* PhosphorSwiftExampleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BE4B1AF72B62305E0081D1E3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					BE4B1AFE2B62305E0081D1E3 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					BE4B1B0F2B62305F0081D1E3 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = BE4B1AFE2B62305E0081D1E3;
+					};
+					BE4B1B192B62305F0081D1E3 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = BE4B1AFE2B62305E0081D1E3;
+					};
+				};
+			};
+			buildConfigurationList = BE4B1AFA2B62305E0081D1E3 /* Build configuration list for PBXProject "PhosphorSwiftExample" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BE4B1AF62B62305E0081D1E3;
+			packageReferences = (
+				BE4B1B2D2B62314B0081D1E3 /* XCLocalSwiftPackageReference "../.." */,
+				BE4B1B302B623AC30081D1E3 /* XCRemoteSwiftPackageReference "GridStack" */,
+			);
+			productRefGroup = BE4B1B002B62305E0081D1E3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BE4B1AFE2B62305E0081D1E3 /* PhosphorSwiftExample */,
+				BE4B1B0F2B62305F0081D1E3 /* PhosphorSwiftExampleTests */,
+				BE4B1B192B62305F0081D1E3 /* PhosphorSwiftExampleUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BE4B1AFD2B62305E0081D1E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE4B1B0A2B62305E0081D1E3 /* Preview Assets.xcassets in Resources */,
+				BE4B1B072B62305E0081D1E3 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE4B1B0E2B62305F0081D1E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE4B1B182B62305F0081D1E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BE4B1AFB2B62305E0081D1E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE4B1B052B62305E0081D1E3 /* ContentView.swift in Sources */,
+				BE4B1B032B62305E0081D1E3 /* PhosphorSwiftExampleApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE4B1B0C2B62305F0081D1E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE4B1B152B62305F0081D1E3 /* PhosphorSwiftExampleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE4B1B162B62305F0081D1E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE4B1B212B62305F0081D1E3 /* PhosphorSwiftExampleUITestsLaunchTests.swift in Sources */,
+				BE4B1B1F2B62305F0081D1E3 /* PhosphorSwiftExampleUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BE4B1B122B62305F0081D1E3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BE4B1AFE2B62305E0081D1E3 /* PhosphorSwiftExample */;
+			targetProxy = BE4B1B112B62305F0081D1E3 /* PBXContainerItemProxy */;
+		};
+		BE4B1B1C2B62305F0081D1E3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BE4B1AFE2B62305E0081D1E3 /* PhosphorSwiftExample */;
+			targetProxy = BE4B1B1B2B62305F0081D1E3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		BE4B1B222B62305F0081D1E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BE4B1B232B62305F0081D1E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		BE4B1B252B62305F0081D1E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PhosphorSwiftExample/PhosphorSwiftExample.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"PhosphorSwiftExample/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.phosphoricons.PhosphorSwiftExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		BE4B1B262B62305F0081D1E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PhosphorSwiftExample/PhosphorSwiftExample.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"PhosphorSwiftExample/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.phosphoricons.PhosphorSwiftExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		BE4B1B282B62305F0081D1E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.phosphoricons.PhosphorSwiftExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PhosphorSwiftExample.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PhosphorSwiftExample";
+			};
+			name = Debug;
+		};
+		BE4B1B292B62305F0081D1E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.phosphoricons.PhosphorSwiftExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PhosphorSwiftExample.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PhosphorSwiftExample";
+			};
+			name = Release;
+		};
+		BE4B1B2B2B62305F0081D1E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.phosphoricons.PhosphorSwiftExampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = PhosphorSwiftExample;
+			};
+			name = Debug;
+		};
+		BE4B1B2C2B62305F0081D1E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.phosphoricons.PhosphorSwiftExampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = PhosphorSwiftExample;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BE4B1AFA2B62305E0081D1E3 /* Build configuration list for PBXProject "PhosphorSwiftExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE4B1B222B62305F0081D1E3 /* Debug */,
+				BE4B1B232B62305F0081D1E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BE4B1B242B62305F0081D1E3 /* Build configuration list for PBXNativeTarget "PhosphorSwiftExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE4B1B252B62305F0081D1E3 /* Debug */,
+				BE4B1B262B62305F0081D1E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BE4B1B272B62305F0081D1E3 /* Build configuration list for PBXNativeTarget "PhosphorSwiftExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE4B1B282B62305F0081D1E3 /* Debug */,
+				BE4B1B292B62305F0081D1E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BE4B1B2A2B62305F0081D1E3 /* Build configuration list for PBXNativeTarget "PhosphorSwiftExampleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE4B1B2B2B62305F0081D1E3 /* Debug */,
+				BE4B1B2C2B62305F0081D1E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		BE4B1B2D2B62314B0081D1E3 /* XCLocalSwiftPackageReference "../.." */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../..;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BE4B1B302B623AC30081D1E3 /* XCRemoteSwiftPackageReference "GridStack" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pietropizzi/GridStack";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.4.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BE2240032B631EAD006E71A2 /* PhosphorSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PhosphorSwift;
+		};
+		BE4B1B312B623AC30081D1E3 /* GridStack */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BE4B1B302B623AC30081D1E3 /* XCRemoteSwiftPackageReference "GridStack" */;
+			productName = GridStack;
+		};
+		BEA59BBA2B6255EA00D27414 /* PhosphorSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PhosphorSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = BE4B1AF72B62305E0081D1E3 /* Project object */;
+}

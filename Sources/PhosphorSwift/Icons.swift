@@ -10,7 +10,7 @@ import SwiftUI
 
 public enum Ph: String, CaseIterable, Identifiable {
     public var id: Self { self }
-  
+
     case addressBook = "address-book"
     case airTrafficControl = "air-traffic-control"
     case airplane

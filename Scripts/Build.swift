@@ -1,5 +1,5 @@
 //
-//  Setup.swift
+//  Build.swift
 //  PhosphorSwift
 //
 //  Created by Tobias Fried on 1/25/24.
@@ -8,7 +8,7 @@
 import Foundation
 
 @main
-enum Setup {
+enum Build {
     static func main() async throws {
         let icons = try await buildAssets()
         try await emitSource(icons: icons)

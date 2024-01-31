@@ -20,24 +20,34 @@ let columns = [
 
 struct ContentView: View {
     @State private var selectedWeight: Ph.IconWeight = .regular
+    @State private var color = Color(.sRGB, red: 1, green: 1, blue: 1)
 
     var body: some View {
-        Picker("Weight", selection: $selectedWeight) {
-            Text("Regular").tag(Ph.IconWeight.regular)
-            Text("Thin").tag(Ph.IconWeight.thin)
-            Text("Light").tag(Ph.IconWeight.light)
-            Text("Bold").tag(Ph.IconWeight.bold)
-            Text("Fill").tag(Ph.IconWeight.fill)
-            Text("Duotone").tag(Ph.IconWeight.duotone)
-        }.padding()
-
-        GridStack(minCellWidth: 48, spacing: 8, numItems: Ph.allCases.count) { index, width in
-            Ph.allCases[index].weight(selectedWeight)
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(width: width, height: width)
-                .color(.clear)
-        }.padding()
+        Group {
+            Text("Phosphor Icons").font(.title3).bold().padding([.top])
+            Text("A vector icon library for SwiftUI").font(.body).foregroundColor(.secondary)
+            Divider()
+            HStack(alignment: .center) {
+                Picker("Weight", selection: $selectedWeight) {
+                    Text("Regular").tag(Ph.IconWeight.regular)
+                    Text("Thin").tag(Ph.IconWeight.thin)
+                    Text("Light").tag(Ph.IconWeight.light)
+                    Text("Bold").tag(Ph.IconWeight.bold)
+                    Text("Fill").tag(Ph.IconWeight.fill)
+                    Text("Duotone").tag(Ph.IconWeight.duotone)
+                }
+                ColorPicker("Color", selection: $color)
+            }
+            .padding([.horizontal])
+            
+            GridStack(minCellWidth: 32, spacing: 8, numItems: Ph.allCases.count) { index, width in
+                Ph.allCases[index].weight(selectedWeight)
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: width, height: width)
+                    .color(color)
+            }
+        }
 //        ScrollView {
 //            LazyVGrid(columns: columns) {
 //                ForEach(Ph.allCases) { icon in

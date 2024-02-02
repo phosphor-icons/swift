@@ -10,7 +10,7 @@ import SwiftUI
 public extension Ph {
     enum IconWeight: String, CaseIterable, Identifiable {
         public var id: Self { self }
-        
+
         case regular
         case thin
         case light
@@ -19,13 +19,13 @@ public extension Ph {
         case duotone
     }
 
-    var regular: Image { return Image(self.rawValue, bundle: .module) }
-    var thin: Image { return Image("\(self.rawValue)-thin", bundle: .module) }
-    var light: Image { return Image("\(self.rawValue)-light", bundle: .module) }
-    var bold: Image { return Image("\(self.rawValue)-bold", bundle: .module) }
-    var fill: Image { return Image("\(self.rawValue)-fill", bundle: .module) }
-    var duotone: Image { return Image("\(self.rawValue)-duotone", bundle: .module) }
-    
+    var regular: Image { Ph.icon(self.rawValue) }
+    var thin: Image { Ph.icon("\(self.rawValue)-thin") }
+    var light: Image { Ph.icon("\(self.rawValue)-light") }
+    var bold: Image { Ph.icon("\(self.rawValue)-bold") }
+    var fill: Image { Ph.icon("\(self.rawValue)-fill") }
+    var duotone: Image { Ph.icon("\(self.rawValue)-duotone") }
+
     func weight(_ weight: IconWeight) -> Image {
         switch weight {
         case .regular: return self.regular
@@ -36,16 +36,22 @@ public extension Ph {
         case .duotone: return self.duotone
         }
     }
+    
+    private static func icon(_ name: String) -> Image {
+        Image(name, bundle: .module)
+            .interpolation(.medium)
+            .resizable()
+    }
 }
 
-public struct ColorBlended: ViewModifier {
+struct ColorBlended: ViewModifier {
     fileprivate var color: Color
 
     public func body(content: Content) -> some View {
         VStack {
             ZStack {
                 content
-                color.blendMode(.sourceAtop)
+                self.color.blendMode(.sourceAtop)
             }
             .drawingGroup(opaque: false)
         }

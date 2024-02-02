@@ -10,28 +10,17 @@ import SwiftUI
 
 public enum Ph: String, CaseIterable, Identifiable {
     public var id: Self { self }
-    
-    public enum IconWeight: String, CaseIterable, Identifiable {
-        public var id: Self { self }
-        
-        case regular
-        case thin
-        case light
-        case bold
-        case fill
-        case duotone
-    }
 
     case addressBook = "address-book"
     case airTrafficControl = "air-traffic-control"
-    case airplane
+    case airplane = "airplane"
     case airplaneInFlight = "airplane-in-flight"
     case airplaneLanding = "airplane-landing"
     case airplaneTakeoff = "airplane-takeoff"
     case airplaneTilt = "airplane-tilt"
-    case airplay
-    case alarm
-    case alien
+    case airplay = "airplay"
+    case alarm = "alarm"
+    case alien = "alien"
     case alignBottom = "align-bottom"
     case alignBottomSimple = "align-bottom-simple"
     case alignCenterHorizontal = "align-center-horizontal"
@@ -45,19 +34,19 @@ public enum Ph: String, CaseIterable, Identifiable {
     case alignTop = "align-top"
     case alignTopSimple = "align-top-simple"
     case amazonLogo = "amazon-logo"
-    case anchor
+    case anchor = "anchor"
     case anchorSimple = "anchor-simple"
     case androidLogo = "android-logo"
     case angularLogo = "angular-logo"
-    case aperture
+    case aperture = "aperture"
     case appStoreLogo = "app-store-logo"
     case appWindow = "app-window"
     case appleLogo = "apple-logo"
     case applePodcastsLogo = "apple-podcasts-logo"
-    case archive
+    case archive = "archive"
     case archiveBox = "archive-box"
     case archiveTray = "archive-tray"
-    case armchair
+    case armchair = "armchair"
     case arrowArcLeft = "arrow-arc-left"
     case arrowArcRight = "arrow-arc-right"
     case arrowBendDoubleUpLeft = "arrow-bend-double-up-left"
@@ -154,29 +143,29 @@ public enum Ph: String, CaseIterable, Identifiable {
     case arrowsOutSimple = "arrows-out-simple"
     case arrowsSplit = "arrows-split"
     case arrowsVertical = "arrows-vertical"
-    case article
+    case article = "article"
     case articleMedium = "article-medium"
     case articleNyTimes = "article-ny-times"
-    case asterisk
+    case asterisk = "asterisk"
     case asteriskSimple = "asterisk-simple"
-    case at
-    case atom
-    case baby
-    case backpack
-    case backspace
-    case bag
+    case at = "at"
+    case atom = "atom"
+    case baby = "baby"
+    case backpack = "backpack"
+    case backspace = "backspace"
+    case bag = "bag"
     case bagSimple = "bag-simple"
-    case balloon
-    case bandaids
-    case bank
-    case barbell
-    case barcode
-    case barricade
-    case baseball
+    case balloon = "balloon"
+    case bandaids = "bandaids"
+    case bank = "bank"
+    case barbell = "barbell"
+    case barcode = "barcode"
+    case barricade = "barricade"
+    case baseball = "baseball"
     case baseballCap = "baseball-cap"
-    case basket
-    case basketball
-    case bathtub
+    case basket = "basket"
+    case basketball = "basketball"
+    case bathtub = "bathtub"
     case batteryCharging = "battery-charging"
     case batteryChargingVertical = "battery-charging-vertical"
     case batteryEmpty = "battery-empty"
@@ -193,11 +182,11 @@ public enum Ph: String, CaseIterable, Identifiable {
     case batteryVerticalMedium = "battery-vertical-medium"
     case batteryWarning = "battery-warning"
     case batteryWarningVertical = "battery-warning-vertical"
-    case bed
+    case bed = "bed"
     case beerBottle = "beer-bottle"
     case beerStein = "beer-stein"
     case behanceLogo = "behance-logo"
-    case bell
+    case bell = "bell"
     case bellRinging = "bell-ringing"
     case bellSimple = "bell-simple"
     case bellSimpleRinging = "bell-simple-ringing"
@@ -206,65 +195,65 @@ public enum Ph: String, CaseIterable, Identifiable {
     case bellSlash = "bell-slash"
     case bellZ = "bell-z"
     case bezierCurve = "bezier-curve"
-    case bicycle
-    case binoculars
-    case bird
-    case bluetooth
+    case bicycle = "bicycle"
+    case binoculars = "binoculars"
+    case bird = "bird"
+    case bluetooth = "bluetooth"
     case bluetoothConnected = "bluetooth-connected"
     case bluetoothSlash = "bluetooth-slash"
     case bluetoothX = "bluetooth-x"
-    case boat
-    case bone
-    case book
+    case boat = "boat"
+    case bone = "bone"
+    case book = "book"
     case bookBookmark = "book-bookmark"
     case bookOpen = "book-open"
     case bookOpenText = "book-open-text"
-    case bookmark
+    case bookmark = "bookmark"
     case bookmarkSimple = "bookmark-simple"
-    case bookmarks
+    case bookmarks = "bookmarks"
     case bookmarksSimple = "bookmarks-simple"
-    case books
-    case boot
+    case books = "books"
+    case boot = "boot"
     case boundingBox = "bounding-box"
     case bowlFood = "bowl-food"
     case bracketsAngle = "brackets-angle"
     case bracketsCurly = "brackets-curly"
     case bracketsRound = "brackets-round"
     case bracketsSquare = "brackets-square"
-    case brain
-    case brandy
-    case bridge
-    case briefcase
+    case brain = "brain"
+    case brandy = "brandy"
+    case bridge = "bridge"
+    case briefcase = "briefcase"
     case briefcaseMetal = "briefcase-metal"
-    case broadcast
-    case broom
-    case browser
-    case browsers
-    case bug
+    case broadcast = "broadcast"
+    case broom = "broom"
+    case browser = "browser"
+    case browsers = "browsers"
+    case bug = "bug"
     case bugBeetle = "bug-beetle"
     case bugDroid = "bug-droid"
-    case buildings
-    case bus
-    case butterfly
-    case cactus
-    case cake
-    case calculator
-    case calendar
+    case buildings = "buildings"
+    case bus = "bus"
+    case butterfly = "butterfly"
+    case cactus = "cactus"
+    case cake = "cake"
+    case calculator = "calculator"
+    case calendar = "calendar"
     case calendarBlank = "calendar-blank"
     case calendarCheck = "calendar-check"
     case calendarPlus = "calendar-plus"
     case calendarX = "calendar-x"
     case callBell = "call-bell"
-    case camera
+    case camera = "camera"
     case cameraPlus = "camera-plus"
     case cameraRotate = "camera-rotate"
     case cameraSlash = "camera-slash"
-    case campfire
-    case car
+    case campfire = "campfire"
+    case car = "car"
     case carProfile = "car-profile"
     case carSimple = "car-simple"
-    case cardholder
-    case cards
+    case cardholder = "cardholder"
+    case cards = "cards"
     case caretCircleDoubleDown = "caret-circle-double-down"
     case caretCircleDoubleLeft = "caret-circle-double-left"
     case caretCircleDoubleRight = "caret-circle-double-right"
@@ -283,10 +272,10 @@ public enum Ph: String, CaseIterable, Identifiable {
     case caretRight = "caret-right"
     case caretUp = "caret-up"
     case caretUpDown = "caret-up-down"
-    case carrot
+    case carrot = "carrot"
     case cassetteTape = "cassette-tape"
     case castleTurret = "castle-turret"
-    case cat
+    case cat = "cat"
     case cellSignalFull = "cell-signal-full"
     case cellSignalHigh = "cell-signal-high"
     case cellSignalLow = "cell-signal-low"
@@ -294,12 +283,12 @@ public enum Ph: String, CaseIterable, Identifiable {
     case cellSignalNone = "cell-signal-none"
     case cellSignalSlash = "cell-signal-slash"
     case cellSignalX = "cell-signal-x"
-    case certificate
-    case chair
-    case chalkboard
+    case certificate = "certificate"
+    case chair = "chair"
+    case chalkboard = "chalkboard"
     case chalkboardSimple = "chalkboard-simple"
     case chalkboardTeacher = "chalkboard-teacher"
-    case champagne
+    case champagne = "champagne"
     case chargingStation = "charging-station"
     case chartBar = "chart-bar"
     case chartBarHorizontal = "chart-bar-horizontal"
@@ -311,7 +300,7 @@ public enum Ph: String, CaseIterable, Identifiable {
     case chartPieSlice = "chart-pie-slice"
     case chartPolar = "chart-polar"
     case chartScatter = "chart-scatter"
-    case chat
+    case chat = "chat"
     case chatCentered = "chat-centered"
     case chatCenteredDots = "chat-centered-dots"
     case chatCenteredText = "chat-centered-text"
@@ -323,17 +312,17 @@ public enum Ph: String, CaseIterable, Identifiable {
     case chatTeardropDots = "chat-teardrop-dots"
     case chatTeardropText = "chat-teardrop-text"
     case chatText = "chat-text"
-    case chats
+    case chats = "chats"
     case chatsCircle = "chats-circle"
     case chatsTeardrop = "chats-teardrop"
-    case check
+    case check = "check"
     case checkCircle = "check-circle"
     case checkFat = "check-fat"
     case checkSquare = "check-square"
     case checkSquareOffset = "check-square-offset"
-    case checks
-    case church
-    case circle
+    case checks = "checks"
+    case church = "church"
+    case circle = "circle"
     case circleDashed = "circle-dashed"
     case circleHalf = "circle-half"
     case circleHalfTilt = "circle-half-tilt"
@@ -341,16 +330,16 @@ public enum Ph: String, CaseIterable, Identifiable {
     case circlesFour = "circles-four"
     case circlesThree = "circles-three"
     case circlesThreePlus = "circles-three-plus"
-    case circuitry
-    case clipboard
+    case circuitry = "circuitry"
+    case clipboard = "clipboard"
     case clipboardText = "clipboard-text"
-    case clock
+    case clock = "clock"
     case clockAfternoon = "clock-afternoon"
     case clockClockwise = "clock-clockwise"
     case clockCountdown = "clock-countdown"
     case clockCounterClockwise = "clock-counter-clockwise"
     case closedCaptioning = "closed-captioning"
-    case cloud
+    case cloud = "cloud"
     case cloudArrowDown = "cloud-arrow-down"
     case cloudArrowUp = "cloud-arrow-up"
     case cloudCheck = "cloud-check"
@@ -363,44 +352,44 @@ public enum Ph: String, CaseIterable, Identifiable {
     case cloudSun = "cloud-sun"
     case cloudWarning = "cloud-warning"
     case cloudX = "cloud-x"
-    case club
+    case club = "club"
     case coatHanger = "coat-hanger"
     case codaLogo = "coda-logo"
-    case code
+    case code = "code"
     case codeBlock = "code-block"
     case codeSimple = "code-simple"
     case codepenLogo = "codepen-logo"
     case codesandboxLogo = "codesandbox-logo"
-    case coffee
-    case coin
+    case coffee = "coffee"
+    case coin = "coin"
     case coinVertical = "coin-vertical"
-    case coins
-    case columns
-    case command
-    case compass
+    case coins = "coins"
+    case columns = "columns"
+    case command = "command"
+    case compass = "compass"
     case compassTool = "compass-tool"
     case computerTower = "computer-tower"
-    case confetti
+    case confetti = "confetti"
     case contactlessPayment = "contactless-payment"
-    case control
-    case cookie
+    case control = "control"
+    case cookie = "cookie"
     case cookingPot = "cooking-pot"
-    case copy
+    case copy = "copy"
     case copySimple = "copy-simple"
-    case copyleft
-    case copyright
+    case copyleft = "copyleft"
+    case copyright = "copyright"
     case cornersIn = "corners-in"
     case cornersOut = "corners-out"
-    case couch
-    case cpu
+    case couch = "couch"
+    case cpu = "cpu"
     case creditCard = "credit-card"
-    case crop
-    case cross
-    case crosshair
+    case crop = "crop"
+    case cross = "cross"
+    case crosshair = "crosshair"
     case crosshairSimple = "crosshair-simple"
-    case crown
+    case crown = "crown"
     case crownSimple = "crown-simple"
-    case cube
+    case cube = "cube"
     case cubeFocus = "cube-focus"
     case cubeTransparent = "cube-transparent"
     case currencyBtc = "currency-btc"
@@ -417,14 +406,14 @@ public enum Ph: String, CaseIterable, Identifiable {
     case currencyKzt = "currency-kzt"
     case currencyNgn = "currency-ngn"
     case currencyRub = "currency-rub"
-    case cursor
+    case cursor = "cursor"
     case cursorClick = "cursor-click"
     case cursorText = "cursor-text"
-    case cylinder
-    case database
-    case desktop
+    case cylinder = "cylinder"
+    case database = "database"
+    case desktop = "desktop"
     case desktopTower = "desktop-tower"
-    case detective
+    case detective = "detective"
     case devToLogo = "dev-to-logo"
     case deviceMobile = "device-mobile"
     case deviceMobileCamera = "device-mobile-camera"
@@ -432,8 +421,8 @@ public enum Ph: String, CaseIterable, Identifiable {
     case deviceTablet = "device-tablet"
     case deviceTabletCamera = "device-tablet-camera"
     case deviceTabletSpeaker = "device-tablet-speaker"
-    case devices
-    case diamond
+    case devices = "devices"
+    case diamond = "diamond"
     case diamondsFour = "diamonds-four"
     case diceFive = "dice-five"
     case diceFour = "dice-four"
@@ -441,14 +430,14 @@ public enum Ph: String, CaseIterable, Identifiable {
     case diceSix = "dice-six"
     case diceThree = "dice-three"
     case diceTwo = "dice-two"
-    case disc
+    case disc = "disc"
     case discordLogo = "discord-logo"
-    case divide
-    case dna
-    case dog
-    case door
+    case divide = "divide"
+    case dna = "dna"
+    case dog = "dog"
+    case door = "door"
     case doorOpen = "door-open"
-    case dot
+    case dot = "dot"
     case dotOutline = "dot-outline"
     case dotsNine = "dots-nine"
     case dotsSix = "dots-six"
@@ -459,52 +448,52 @@ public enum Ph: String, CaseIterable, Identifiable {
     case dotsThreeOutline = "dots-three-outline"
     case dotsThreeOutlineVertical = "dots-three-outline-vertical"
     case dotsThreeVertical = "dots-three-vertical"
-    case download
+    case download = "download"
     case downloadSimple = "download-simple"
-    case dress
+    case dress = "dress"
     case dribbbleLogo = "dribbble-logo"
-    case drop
+    case drop = "drop"
     case dropHalf = "drop-half"
     case dropHalfBottom = "drop-half-bottom"
     case dropboxLogo = "dropbox-logo"
-    case ear
+    case ear = "ear"
     case earSlash = "ear-slash"
-    case egg
+    case egg = "egg"
     case eggCrack = "egg-crack"
-    case eject
+    case eject = "eject"
     case ejectSimple = "eject-simple"
-    case elevator
-    case engine
-    case envelope
+    case elevator = "elevator"
+    case engine = "engine"
+    case envelope = "envelope"
     case envelopeOpen = "envelope-open"
     case envelopeSimple = "envelope-simple"
     case envelopeSimpleOpen = "envelope-simple-open"
-    case equalizer
-    case equals
-    case eraser
+    case equalizer = "equalizer"
+    case equals = "equals"
+    case eraser = "eraser"
     case escalatorDown = "escalator-down"
     case escalatorUp = "escalator-up"
-    case exam
-    case exclude
+    case exam = "exam"
+    case exclude = "exclude"
     case excludeSquare = "exclude-square"
-    case export
-    case eye
+    case export = "export"
+    case eye = "eye"
     case eyeClosed = "eye-closed"
     case eyeSlash = "eye-slash"
-    case eyedropper
+    case eyedropper = "eyedropper"
     case eyedropperSample = "eyedropper-sample"
-    case eyeglasses
+    case eyeglasses = "eyeglasses"
     case faceMask = "face-mask"
     case facebookLogo = "facebook-logo"
-    case factory
-    case faders
+    case factory = "factory"
+    case faders = "faders"
     case fadersHorizontal = "faders-horizontal"
-    case fan
+    case fan = "fan"
     case fastForward = "fast-forward"
     case fastForwardCircle = "fast-forward-circle"
-    case feather
+    case feather = "feather"
     case figmaLogo = "figma-logo"
-    case file
+    case file = "file"
     case fileArchive = "file-archive"
     case fileArrowDown = "file-arrow-down"
     case fileArrowUp = "file-arrow-up"
@@ -538,36 +527,36 @@ public enum Ph: String, CaseIterable, Identifiable {
     case fileX = "file-x"
     case fileXls = "file-xls"
     case fileZip = "file-zip"
-    case files
+    case files = "files"
     case filmReel = "film-reel"
     case filmScript = "film-script"
     case filmSlate = "film-slate"
     case filmStrip = "film-strip"
-    case fingerprint
+    case fingerprint = "fingerprint"
     case fingerprintSimple = "fingerprint-simple"
     case finnTheHuman = "finn-the-human"
-    case fire
+    case fire = "fire"
     case fireExtinguisher = "fire-extinguisher"
     case fireSimple = "fire-simple"
     case firstAid = "first-aid"
     case firstAidKit = "first-aid-kit"
-    case fish
+    case fish = "fish"
     case fishSimple = "fish-simple"
-    case flag
+    case flag = "flag"
     case flagBanner = "flag-banner"
     case flagCheckered = "flag-checkered"
     case flagPennant = "flag-pennant"
-    case flame
-    case flashlight
-    case flask
+    case flame = "flame"
+    case flashlight = "flashlight"
+    case flask = "flask"
     case floppyDisk = "floppy-disk"
     case floppyDiskBack = "floppy-disk-back"
     case flowArrow = "flow-arrow"
-    case flower
+    case flower = "flower"
     case flowerLotus = "flower-lotus"
     case flowerTulip = "flower-tulip"
     case flyingSaucer = "flying-saucer"
-    case folder
+    case folder = "folder"
     case folderDashed = "folder-dashed"
     case folderLock = "folder-lock"
     case folderMinus = "folder-minus"
@@ -586,22 +575,22 @@ public enum Ph: String, CaseIterable, Identifiable {
     case folderSimpleUser = "folder-simple-user"
     case folderStar = "folder-star"
     case folderUser = "folder-user"
-    case folders
-    case football
-    case footprints
+    case folders = "folders"
+    case football = "football"
+    case footprints = "footprints"
     case forkKnife = "fork-knife"
     case frameCorners = "frame-corners"
     case framerLogo = "framer-logo"
-    case function
-    case funnel
+    case function = "function"
+    case funnel = "funnel"
     case funnelSimple = "funnel-simple"
     case gameController = "game-controller"
-    case garage
+    case garage = "garage"
     case gasCan = "gas-can"
     case gasPump = "gas-pump"
-    case gauge
-    case gavel
-    case gear
+    case gauge = "gauge"
+    case gavel = "gavel"
+    case gear = "gear"
     case gearFine = "gear-fine"
     case gearSix = "gear-six"
     case genderFemale = "gender-female"
@@ -610,9 +599,9 @@ public enum Ph: String, CaseIterable, Identifiable {
     case genderNeuter = "gender-neuter"
     case genderNonbinary = "gender-nonbinary"
     case genderTransgender = "gender-transgender"
-    case ghost
-    case gif
-    case gift
+    case ghost = "ghost"
+    case gif = "gif"
+    case gift = "gift"
     case gitBranch = "git-branch"
     case gitCommit = "git-commit"
     case gitDiff = "git-diff"
@@ -622,12 +611,12 @@ public enum Ph: String, CaseIterable, Identifiable {
     case githubLogo = "github-logo"
     case gitlabLogo = "gitlab-logo"
     case gitlabLogoSimple = "gitlab-logo-simple"
-    case globe
+    case globe = "globe"
     case globeHemisphereEast = "globe-hemisphere-east"
     case globeHemisphereWest = "globe-hemisphere-west"
     case globeSimple = "globe-simple"
     case globeStand = "globe-stand"
-    case goggles
+    case goggles = "goggles"
     case goodreadsLogo = "goodreads-logo"
     case googleCardboardLogo = "google-cardboard-logo"
     case googleChromeLogo = "google-chrome-logo"
@@ -636,17 +625,17 @@ public enum Ph: String, CaseIterable, Identifiable {
     case googlePhotosLogo = "google-photos-logo"
     case googlePlayLogo = "google-play-logo"
     case googlePodcastsLogo = "google-podcasts-logo"
-    case gradient
+    case gradient = "gradient"
     case graduationCap = "graduation-cap"
-    case grains
+    case grains = "grains"
     case grainsSlash = "grains-slash"
-    case graph
+    case graph = "graph"
     case gridFour = "grid-four"
     case gridNine = "grid-nine"
-    case guitar
-    case hamburger
-    case hammer
-    case hand
+    case guitar = "guitar"
+    case hamburger = "hamburger"
+    case hammer = "hammer"
+    case hand = "hand"
     case handCoins = "hand-coins"
     case handEye = "hand-eye"
     case handFist = "hand-fist"
@@ -659,30 +648,30 @@ public enum Ph: String, CaseIterable, Identifiable {
     case handSwipeRight = "hand-swipe-right"
     case handTap = "hand-tap"
     case handWaving = "hand-waving"
-    case handbag
+    case handbag = "handbag"
     case handbagSimple = "handbag-simple"
     case handsClapping = "hands-clapping"
     case handsPraying = "hands-praying"
-    case handshake
+    case handshake = "handshake"
     case hardDrive = "hard-drive"
     case hardDrives = "hard-drives"
-    case hash
+    case hash = "hash"
     case hashStraight = "hash-straight"
-    case headlights
-    case headphones
-    case headset
-    case heart
+    case headlights = "headlights"
+    case headphones = "headphones"
+    case headset = "headset"
+    case heart = "heart"
     case heartBreak = "heart-break"
     case heartHalf = "heart-half"
     case heartStraight = "heart-straight"
     case heartStraightBreak = "heart-straight-break"
-    case heartbeat
-    case hexagon
+    case heartbeat = "heartbeat"
+    case hexagon = "hexagon"
     case highHeel = "high-heel"
     case highlighterCircle = "highlighter-circle"
-    case hoodie
-    case horse
-    case hourglass
+    case hoodie = "hoodie"
+    case horse = "horse"
+    case hourglass = "hourglass"
     case hourglassHigh = "hourglass-high"
     case hourglassLow = "hourglass-low"
     case hourglassMedium = "hourglass-medium"
@@ -690,45 +679,45 @@ public enum Ph: String, CaseIterable, Identifiable {
     case hourglassSimpleHigh = "hourglass-simple-high"
     case hourglassSimpleLow = "hourglass-simple-low"
     case hourglassSimpleMedium = "hourglass-simple-medium"
-    case house
+    case house = "house"
     case houseLine = "house-line"
     case houseSimple = "house-simple"
     case iceCream = "ice-cream"
     case identificationBadge = "identification-badge"
     case identificationCard = "identification-card"
-    case image
+    case image = "image"
     case imageSquare = "image-square"
-    case images
+    case images = "images"
     case imagesSquare = "images-square"
-    case infinity
-    case info
+    case infinity = "infinity"
+    case info = "info"
     case instagramLogo = "instagram-logo"
-    case intersect
+    case intersect = "intersect"
     case intersectSquare = "intersect-square"
     case intersectThree = "intersect-three"
-    case jeep
-    case kanban
-    case key
+    case jeep = "jeep"
+    case kanban = "kanban"
+    case key = "key"
     case keyReturn = "key-return"
-    case keyboard
-    case keyhole
-    case knife
-    case ladder
+    case keyboard = "keyboard"
+    case keyhole = "keyhole"
+    case knife = "knife"
+    case ladder = "ladder"
     case ladderSimple = "ladder-simple"
-    case lamp
-    case laptop
-    case layout
-    case leaf
-    case lifebuoy
-    case lightbulb
+    case lamp = "lamp"
+    case laptop = "laptop"
+    case layout = "layout"
+    case leaf = "leaf"
+    case lifebuoy = "lifebuoy"
+    case lightbulb = "lightbulb"
     case lightbulbFilament = "lightbulb-filament"
-    case lighthouse
-    case lightning
+    case lighthouse = "lighthouse"
+    case lightning = "lightning"
     case lightningA = "lightning-a"
     case lightningSlash = "lightning-slash"
     case lineSegment = "line-segment"
     case lineSegments = "line-segments"
-    case link
+    case link = "link"
     case linkBreak = "link-break"
     case linkSimple = "link-simple"
     case linkSimpleBreak = "link-simple-break"
@@ -736,14 +725,14 @@ public enum Ph: String, CaseIterable, Identifiable {
     case linkSimpleHorizontalBreak = "link-simple-horizontal-break"
     case linkedinLogo = "linkedin-logo"
     case linuxLogo = "linux-logo"
-    case list
+    case list = "list"
     case listBullets = "list-bullets"
     case listChecks = "list-checks"
     case listDashes = "list-dashes"
     case listMagnifyingGlass = "list-magnifying-glass"
     case listNumbers = "list-numbers"
     case listPlus = "list-plus"
-    case lock
+    case lock = "lock"
     case lockKey = "lock-key"
     case lockKeyOpen = "lock-key-open"
     case lockLaminated = "lock-laminated"
@@ -751,9 +740,9 @@ public enum Ph: String, CaseIterable, Identifiable {
     case lockOpen = "lock-open"
     case lockSimple = "lock-simple"
     case lockSimpleOpen = "lock-simple-open"
-    case lockers
+    case lockers = "lockers"
     case magicWand = "magic-wand"
-    case magnet
+    case magnet = "magnet"
     case magnetStraight = "magnet-straight"
     case magnifyingGlass = "magnifying-glass"
     case magnifyingGlassMinus = "magnifying-glass-minus"
@@ -762,19 +751,19 @@ public enum Ph: String, CaseIterable, Identifiable {
     case mapPinLine = "map-pin-line"
     case mapTrifold = "map-trifold"
     case markerCircle = "marker-circle"
-    case martini
+    case martini = "martini"
     case maskHappy = "mask-happy"
     case maskSad = "mask-sad"
     case mathOperations = "math-operations"
-    case medal
+    case medal = "medal"
     case medalMilitary = "medal-military"
     case mediumLogo = "medium-logo"
-    case megaphone
+    case megaphone = "megaphone"
     case megaphoneSimple = "megaphone-simple"
     case messengerLogo = "messenger-logo"
     case metaLogo = "meta-logo"
-    case metronome
-    case microphone
+    case metronome = "metronome"
+    case microphone = "microphone"
     case microphoneSlash = "microphone-slash"
     case microphoneStage = "microphone-stage"
     case microsoftExcelLogo = "microsoft-excel-logo"
@@ -782,20 +771,20 @@ public enum Ph: String, CaseIterable, Identifiable {
     case microsoftPowerpointLogo = "microsoft-powerpoint-logo"
     case microsoftTeamsLogo = "microsoft-teams-logo"
     case microsoftWordLogo = "microsoft-word-logo"
-    case minus
+    case minus = "minus"
     case minusCircle = "minus-circle"
     case minusSquare = "minus-square"
-    case money
-    case monitor
+    case money = "money"
+    case monitor = "monitor"
     case monitorPlay = "monitor-play"
-    case moon
+    case moon = "moon"
     case moonStars = "moon-stars"
-    case moped
+    case moped = "moped"
     case mopedFront = "moped-front"
-    case mosque
-    case motorcycle
-    case mountains
-    case mouse
+    case mosque = "mosque"
+    case motorcycle = "motorcycle"
+    case mountains = "mountains"
+    case mouse = "mouse"
     case mouseSimple = "mouse-simple"
     case musicNote = "music-note"
     case musicNoteSimple = "music-note-simple"
@@ -803,16 +792,16 @@ public enum Ph: String, CaseIterable, Identifiable {
     case musicNotesPlus = "music-notes-plus"
     case musicNotesSimple = "music-notes-simple"
     case navigationArrow = "navigation-arrow"
-    case needle
-    case newspaper
+    case needle = "needle"
+    case newspaper = "newspaper"
     case newspaperClipping = "newspaper-clipping"
-    case notches
-    case note
+    case notches = "notches"
+    case note = "note"
     case noteBlank = "note-blank"
     case notePencil = "note-pencil"
-    case notebook
-    case notepad
-    case notification
+    case notebook = "notebook"
+    case notepad = "notepad"
+    case notification = "notification"
     case notionLogo = "notion-logo"
     case numberCircleEight = "number-circle-eight"
     case numberCircleFive = "number-circle-five"
@@ -844,59 +833,59 @@ public enum Ph: String, CaseIterable, Identifiable {
     case numberThree = "number-three"
     case numberTwo = "number-two"
     case numberZero = "number-zero"
-    case nut
+    case nut = "nut"
     case nyTimesLogo = "ny-times-logo"
-    case octagon
+    case octagon = "octagon"
     case officeChair = "office-chair"
-    case option
+    case option = "option"
     case orangeSlice = "orange-slice"
-    case package
+    case package = "package"
     case paintBrush = "paint-brush"
     case paintBrushBroad = "paint-brush-broad"
     case paintBrushHousehold = "paint-brush-household"
     case paintBucket = "paint-bucket"
     case paintRoller = "paint-roller"
-    case palette
-    case pants
+    case palette = "palette"
+    case pants = "pants"
     case paperPlane = "paper-plane"
     case paperPlaneRight = "paper-plane-right"
     case paperPlaneTilt = "paper-plane-tilt"
-    case paperclip
+    case paperclip = "paperclip"
     case paperclipHorizontal = "paperclip-horizontal"
-    case parachute
-    case paragraph
-    case parallelogram
-    case park
-    case password
-    case path
+    case parachute = "parachute"
+    case paragraph = "paragraph"
+    case parallelogram = "parallelogram"
+    case park = "park"
+    case password = "password"
+    case path = "path"
     case patreonLogo = "patreon-logo"
-    case pause
+    case pause = "pause"
     case pauseCircle = "pause-circle"
     case pawPrint = "paw-print"
     case paypalLogo = "paypal-logo"
-    case peace
-    case pen
+    case peace = "peace"
+    case pen = "pen"
     case penNib = "pen-nib"
     case penNibStraight = "pen-nib-straight"
-    case pencil
+    case pencil = "pencil"
     case pencilCircle = "pencil-circle"
     case pencilLine = "pencil-line"
     case pencilSimple = "pencil-simple"
     case pencilSimpleLine = "pencil-simple-line"
     case pencilSimpleSlash = "pencil-simple-slash"
     case pencilSlash = "pencil-slash"
-    case pentagram
-    case pepper
-    case percent
-    case person
+    case pentagram = "pentagram"
+    case pepper = "pepper"
+    case percent = "percent"
+    case person = "person"
     case personArmsSpread = "person-arms-spread"
     case personSimple = "person-simple"
     case personSimpleBike = "person-simple-bike"
     case personSimpleRun = "person-simple-run"
     case personSimpleThrow = "person-simple-throw"
     case personSimpleWalk = "person-simple-walk"
-    case perspective
-    case phone
+    case perspective = "perspective"
+    case phone = "phone"
     case phoneCall = "phone-call"
     case phoneDisconnect = "phone-disconnect"
     case phoneIncoming = "phone-incoming"
@@ -905,102 +894,102 @@ public enum Ph: String, CaseIterable, Identifiable {
     case phoneSlash = "phone-slash"
     case phoneX = "phone-x"
     case phosphorLogo = "phosphor-logo"
-    case pi
+    case pi = "pi"
     case pianoKeys = "piano-keys"
     case pictureInPicture = "picture-in-picture"
     case piggyBank = "piggy-bank"
-    case pill
+    case pill = "pill"
     case pinterestLogo = "pinterest-logo"
-    case pinwheel
-    case pizza
-    case placeholder
-    case planet
-    case plant
-    case play
+    case pinwheel = "pinwheel"
+    case pizza = "pizza"
+    case placeholder = "placeholder"
+    case planet = "planet"
+    case plant = "plant"
+    case play = "play"
     case playCircle = "play-circle"
     case playPause = "play-pause"
-    case playlist
-    case plug
+    case playlist = "playlist"
+    case plug = "plug"
     case plugCharging = "plug-charging"
-    case plugs
+    case plugs = "plugs"
     case plugsConnected = "plugs-connected"
-    case plus
+    case plus = "plus"
     case plusCircle = "plus-circle"
     case plusMinus = "plus-minus"
     case plusSquare = "plus-square"
     case pokerChip = "poker-chip"
     case policeCar = "police-car"
-    case polygon
-    case popcorn
+    case polygon = "polygon"
+    case popcorn = "popcorn"
     case pottedPlant = "potted-plant"
-    case power
-    case prescription
-    case presentation
+    case power = "power"
+    case prescription = "prescription"
+    case presentation = "presentation"
     case presentationChart = "presentation-chart"
-    case printer
-    case prohibit
+    case printer = "printer"
+    case prohibit = "prohibit"
     case prohibitInset = "prohibit-inset"
     case projectorScreen = "projector-screen"
     case projectorScreenChart = "projector-screen-chart"
-    case pulse
+    case pulse = "pulse"
     case pushPin = "push-pin"
     case pushPinSimple = "push-pin-simple"
     case pushPinSimpleSlash = "push-pin-simple-slash"
     case pushPinSlash = "push-pin-slash"
     case puzzlePiece = "puzzle-piece"
     case qrCode = "qr-code"
-    case question
-    case queue
-    case quotes
-    case radical
-    case radio
+    case question = "question"
+    case queue = "queue"
+    case quotes = "quotes"
+    case radical = "radical"
+    case radio = "radio"
     case radioButton = "radio-button"
-    case radioactive
-    case rainbow
+    case radioactive = "radioactive"
+    case rainbow = "rainbow"
     case rainbowCloud = "rainbow-cloud"
     case readCvLogo = "read-cv-logo"
-    case receipt
+    case receipt = "receipt"
     case receiptX = "receipt-x"
-    case record
-    case rectangle
-    case recycle
+    case record = "record"
+    case rectangle = "rectangle"
+    case recycle = "recycle"
     case redditLogo = "reddit-logo"
-    case `repeat`
+    case `repeat` = "repeat"
     case repeatOnce = "repeat-once"
-    case rewind
+    case rewind = "rewind"
     case rewindCircle = "rewind-circle"
     case roadHorizon = "road-horizon"
-    case robot
-    case rocket
+    case robot = "robot"
+    case rocket = "rocket"
     case rocketLaunch = "rocket-launch"
-    case rows
-    case rss
+    case rows = "rows"
+    case rss = "rss"
     case rssSimple = "rss-simple"
-    case rug
-    case ruler
-    case scales
-    case scan
-    case scissors
-    case scooter
-    case screencast
+    case rug = "rug"
+    case ruler = "ruler"
+    case scales = "scales"
+    case scan = "scan"
+    case scissors = "scissors"
+    case scooter = "scooter"
+    case screencast = "screencast"
     case scribbleLoop = "scribble-loop"
-    case scroll
-    case seal
+    case scroll = "scroll"
+    case seal = "seal"
     case sealCheck = "seal-check"
     case sealQuestion = "seal-question"
     case sealWarning = "seal-warning"
-    case selection
+    case selection = "selection"
     case selectionAll = "selection-all"
     case selectionBackground = "selection-background"
     case selectionForeground = "selection-foreground"
     case selectionInverse = "selection-inverse"
     case selectionPlus = "selection-plus"
     case selectionSlash = "selection-slash"
-    case shapes
-    case share
+    case shapes = "shapes"
+    case share = "share"
     case shareFat = "share-fat"
     case shareNetwork = "share-network"
-    case shield
+    case shield = "shield"
     case shieldCheck = "shield-check"
     case shieldCheckered = "shield-checkered"
     case shieldChevron = "shield-chevron"
@@ -1014,31 +1003,31 @@ public enum Ph: String, CaseIterable, Identifiable {
     case shoppingBagOpen = "shopping-bag-open"
     case shoppingCart = "shopping-cart"
     case shoppingCartSimple = "shopping-cart-simple"
-    case shower
-    case shrimp
-    case shuffle
+    case shower = "shower"
+    case shrimp = "shrimp"
+    case shuffle = "shuffle"
     case shuffleAngular = "shuffle-angular"
     case shuffleSimple = "shuffle-simple"
-    case sidebar
+    case sidebar = "sidebar"
     case sidebarSimple = "sidebar-simple"
-    case sigma
+    case sigma = "sigma"
     case signIn = "sign-in"
     case signOut = "sign-out"
-    case signature
-    case signpost
+    case signature = "signature"
+    case signpost = "signpost"
     case simCard = "sim-card"
-    case siren
+    case siren = "siren"
     case sketchLogo = "sketch-logo"
     case skipBack = "skip-back"
     case skipBackCircle = "skip-back-circle"
     case skipForward = "skip-forward"
     case skipForwardCircle = "skip-forward-circle"
-    case skull
+    case skull = "skull"
     case slackLogo = "slack-logo"
-    case sliders
+    case sliders = "sliders"
     case slidersHorizontal = "sliders-horizontal"
-    case slideshow
-    case smiley
+    case slideshow = "slideshow"
+    case smiley = "smiley"
     case smileyAngry = "smiley-angry"
     case smileyBlank = "smiley-blank"
     case smileyMeh = "smiley-meh"
@@ -1048,15 +1037,15 @@ public enum Ph: String, CaseIterable, Identifiable {
     case smileyWink = "smiley-wink"
     case smileyXEyes = "smiley-x-eyes"
     case snapchatLogo = "snapchat-logo"
-    case sneaker
+    case sneaker = "sneaker"
     case sneakerMove = "sneaker-move"
-    case snowflake
+    case snowflake = "snowflake"
     case soccerBall = "soccer-ball"
     case sortAscending = "sort-ascending"
     case sortDescending = "sort-descending"
     case soundcloudLogo = "soundcloud-logo"
-    case spade
-    case sparkle
+    case spade = "spade"
+    case sparkle = "sparkle"
     case speakerHifi = "speaker-hifi"
     case speakerHigh = "speaker-high"
     case speakerLow = "speaker-low"
@@ -1068,70 +1057,70 @@ public enum Ph: String, CaseIterable, Identifiable {
     case speakerSimpleX = "speaker-simple-x"
     case speakerSlash = "speaker-slash"
     case speakerX = "speaker-x"
-    case spinner
+    case spinner = "spinner"
     case spinnerGap = "spinner-gap"
-    case spiral
+    case spiral = "spiral"
     case splitHorizontal = "split-horizontal"
     case splitVertical = "split-vertical"
     case spotifyLogo = "spotify-logo"
-    case square
+    case square = "square"
     case squareHalf = "square-half"
     case squareHalfBottom = "square-half-bottom"
     case squareLogo = "square-logo"
     case squareSplitHorizontal = "square-split-horizontal"
     case squareSplitVertical = "square-split-vertical"
     case squaresFour = "squares-four"
-    case stack
+    case stack = "stack"
     case stackOverflowLogo = "stack-overflow-logo"
     case stackSimple = "stack-simple"
-    case stairs
-    case stamp
-    case star
+    case stairs = "stairs"
+    case stamp = "stamp"
+    case star = "star"
     case starAndCrescent = "star-and-crescent"
     case starFour = "star-four"
     case starHalf = "star-half"
     case starOfDavid = "star-of-david"
     case steeringWheel = "steering-wheel"
-    case steps
-    case stethoscope
-    case sticker
-    case stool
-    case stop
+    case steps = "steps"
+    case stethoscope = "stethoscope"
+    case sticker = "sticker"
+    case stool = "stool"
+    case stop = "stop"
     case stopCircle = "stop-circle"
-    case storefront
-    case strategy
+    case storefront = "storefront"
+    case strategy = "strategy"
     case stripeLogo = "stripe-logo"
-    case student
-    case subtitles
-    case subtract
+    case student = "student"
+    case subtitles = "subtitles"
+    case subtract = "subtract"
     case subtractSquare = "subtract-square"
-    case suitcase
+    case suitcase = "suitcase"
     case suitcaseRolling = "suitcase-rolling"
     case suitcaseSimple = "suitcase-simple"
-    case sun
+    case sun = "sun"
     case sunDim = "sun-dim"
     case sunHorizon = "sun-horizon"
-    case sunglasses
-    case swap
-    case swatches
+    case sunglasses = "sunglasses"
+    case swap = "swap"
+    case swatches = "swatches"
     case swimmingPool = "swimming-pool"
-    case sword
-    case synagogue
-    case syringe
+    case sword = "sword"
+    case synagogue = "synagogue"
+    case syringe = "syringe"
     case tShirt = "t-shirt"
-    case table
-    case tabs
-    case tag
+    case table = "table"
+    case tabs = "tabs"
+    case tag = "tag"
     case tagChevron = "tag-chevron"
     case tagSimple = "tag-simple"
-    case target
-    case taxi
+    case target = "target"
+    case taxi = "taxi"
     case telegramLogo = "telegram-logo"
-    case television
+    case television = "television"
     case televisionSimple = "television-simple"
     case tennisBall = "tennis-ball"
-    case tent
-    case terminal
+    case tent = "tent"
+    case terminal = "terminal"
     case terminalWindow = "terminal-window"
     case testTube = "test-tube"
     case textAUnderline = "text-a-underline"
@@ -1155,58 +1144,58 @@ public enum Ph: String, CaseIterable, Identifiable {
     case textStrikethrough = "text-strikethrough"
     case textT = "text-t"
     case textUnderline = "text-underline"
-    case textbox
-    case thermometer
+    case textbox = "textbox"
+    case thermometer = "thermometer"
     case thermometerCold = "thermometer-cold"
     case thermometerHot = "thermometer-hot"
     case thermometerSimple = "thermometer-simple"
     case thumbsDown = "thumbs-down"
     case thumbsUp = "thumbs-up"
-    case ticket
+    case ticket = "ticket"
     case tidalLogo = "tidal-logo"
     case tiktokLogo = "tiktok-logo"
-    case timer
-    case tipi
+    case timer = "timer"
+    case tipi = "tipi"
     case toggleLeft = "toggle-left"
     case toggleRight = "toggle-right"
-    case toilet
+    case toilet = "toilet"
     case toiletPaper = "toilet-paper"
-    case toolbox
-    case tooth
-    case tote
+    case toolbox = "toolbox"
+    case tooth = "tooth"
+    case tote = "tote"
     case toteSimple = "tote-simple"
-    case trademark
+    case trademark = "trademark"
     case trademarkRegistered = "trademark-registered"
     case trafficCone = "traffic-cone"
     case trafficSign = "traffic-sign"
     case trafficSignal = "traffic-signal"
-    case train
+    case train = "train"
     case trainRegional = "train-regional"
     case trainSimple = "train-simple"
-    case tram
-    case translate
-    case trash
+    case tram = "tram"
+    case translate = "translate"
+    case trash = "trash"
     case trashSimple = "trash-simple"
-    case tray
-    case tree
+    case tray = "tray"
+    case tree = "tree"
     case treeEvergreen = "tree-evergreen"
     case treePalm = "tree-palm"
     case treeStructure = "tree-structure"
     case trendDown = "trend-down"
     case trendUp = "trend-up"
-    case triangle
-    case trophy
-    case truck
+    case triangle = "triangle"
+    case trophy = "trophy"
+    case truck = "truck"
     case twitchLogo = "twitch-logo"
     case twitterLogo = "twitter-logo"
-    case umbrella
+    case umbrella = "umbrella"
     case umbrellaSimple = "umbrella-simple"
-    case unite
+    case unite = "unite"
     case uniteSquare = "unite-square"
-    case upload
+    case upload = "upload"
     case uploadSimple = "upload-simple"
-    case usb
-    case user
+    case usb = "usb"
+    case user = "user"
     case userCircle = "user-circle"
     case userCircleGear = "user-circle-gear"
     case userCircleMinus = "user-circle-minus"
@@ -1219,41 +1208,41 @@ public enum Ph: String, CaseIterable, Identifiable {
     case userRectangle = "user-rectangle"
     case userSquare = "user-square"
     case userSwitch = "user-switch"
-    case users
+    case users = "users"
     case usersFour = "users-four"
     case usersThree = "users-three"
-    case van
-    case vault
-    case vibrate
-    case video
+    case van = "van"
+    case vault = "vault"
+    case vibrate = "vibrate"
+    case video = "video"
     case videoCamera = "video-camera"
     case videoCameraSlash = "video-camera-slash"
-    case vignette
+    case vignette = "vignette"
     case vinylRecord = "vinyl-record"
     case virtualReality = "virtual-reality"
-    case virus
-    case voicemail
-    case volleyball
-    case wall
-    case wallet
-    case warehouse
-    case warning
+    case virus = "virus"
+    case voicemail = "voicemail"
+    case volleyball = "volleyball"
+    case wall = "wall"
+    case wallet = "wallet"
+    case warehouse = "warehouse"
+    case warning = "warning"
     case warningCircle = "warning-circle"
     case warningDiamond = "warning-diamond"
     case warningOctagon = "warning-octagon"
-    case watch
+    case watch = "watch"
     case waveSawtooth = "wave-sawtooth"
     case waveSine = "wave-sine"
     case waveSquare = "wave-square"
     case waveTriangle = "wave-triangle"
-    case waveform
-    case waves
-    case webcam
+    case waveform = "waveform"
+    case waves = "waves"
+    case webcam = "webcam"
     case webcamSlash = "webcam-slash"
     case webhooksLogo = "webhooks-logo"
     case wechatLogo = "wechat-logo"
     case whatsappLogo = "whatsapp-logo"
-    case wheelchair
+    case wheelchair = "wheelchair"
     case wheelchairMotion = "wheelchair-motion"
     case wifiHigh = "wifi-high"
     case wifiLow = "wifi-low"
@@ -1261,36 +1250,13 @@ public enum Ph: String, CaseIterable, Identifiable {
     case wifiNone = "wifi-none"
     case wifiSlash = "wifi-slash"
     case wifiX = "wifi-x"
-    case wind
+    case wind = "wind"
     case windowsLogo = "windows-logo"
-    case wine
-    case wrench
-    case x
+    case wine = "wine"
+    case wrench = "wrench"
+    case x = "x"
     case xCircle = "x-circle"
     case xSquare = "x-square"
     case yinYang = "yin-yang"
     case youtubeLogo = "youtube-logo"
-
-    public var regular: Image { return Image(self.rawValue, bundle: .module) }
-
-    public var thin: Image { return Image("\(self.rawValue)-thin", bundle: .module) }
-
-    public var light: Image { return Image("\(self.rawValue)-light", bundle: .module) }
-
-    public var bold: Image { return Image("\(self.rawValue)-bold", bundle: .module) }
-
-    public var fill: Image { return Image("\(self.rawValue)-fill", bundle: .module) }
-
-    public var duotone: Image { return Image("\(self.rawValue)-duotone", bundle: .module) }
-    
-    public func weight(_ weight: IconWeight) -> Image {
-        switch weight {
-        case .regular: return self.regular
-        case .thin: return self.thin
-        case .light: return self.light
-        case .bold: return self.bold
-        case .fill: return self.fill
-        case .duotone: return self.duotone
-        }
-    }
 }

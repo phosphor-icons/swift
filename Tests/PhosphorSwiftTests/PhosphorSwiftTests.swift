@@ -14,11 +14,6 @@ final class PhosphorSwiftTests: XCTestCase {
             .color(.blue)
             .aspectRatio(contentMode: .fit)
         
-        
-        let b = Ph.airTrafficControl.thin
-            .resizable()
-            .color(.red)
-        
         debugPrint(a)
     }
 }

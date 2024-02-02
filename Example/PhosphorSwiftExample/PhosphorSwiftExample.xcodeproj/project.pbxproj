@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BE2240042B631EAD006E71A2 /* PhosphorSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BE2240032B631EAD006E71A2 /* PhosphorSwift */; };
 		BE4B1B032B62305E0081D1E3 /* PhosphorSwiftExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4B1B022B62305E0081D1E3 /* PhosphorSwiftExampleApp.swift */; };
 		BE4B1B052B62305E0081D1E3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4B1B042B62305E0081D1E3 /* ContentView.swift */; };
 		BE4B1B072B62305E0081D1E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE4B1B062B62305E0081D1E3 /* Assets.xcassets */; };
@@ -16,7 +15,7 @@
 		BE4B1B1F2B62305F0081D1E3 /* PhosphorSwiftExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4B1B1E2B62305F0081D1E3 /* PhosphorSwiftExampleUITests.swift */; };
 		BE4B1B212B62305F0081D1E3 /* PhosphorSwiftExampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4B1B202B62305F0081D1E3 /* PhosphorSwiftExampleUITestsLaunchTests.swift */; };
 		BE4B1B322B623AC30081D1E3 /* GridStack in Frameworks */ = {isa = PBXBuildFile; productRef = BE4B1B312B623AC30081D1E3 /* GridStack */; };
-		BEA59BBB2B6255EA00D27414 /* PhosphorSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BEA59BBA2B6255EA00D27414 /* PhosphorSwift */; };
+		BE8DAF262B69D4E9007B7EF3 /* PhosphorSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BE8DAF252B69D4E9007B7EF3 /* PhosphorSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,8 +55,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE4B1B322B623AC30081D1E3 /* GridStack in Frameworks */,
-				BEA59BBB2B6255EA00D27414 /* PhosphorSwift in Frameworks */,
-				BE2240042B631EAD006E71A2 /* PhosphorSwift in Frameworks */,
+				BE8DAF262B69D4E9007B7EF3 /* PhosphorSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,8 +151,7 @@
 			name = PhosphorSwiftExample;
 			packageProductDependencies = (
 				BE4B1B312B623AC30081D1E3 /* GridStack */,
-				BEA59BBA2B6255EA00D27414 /* PhosphorSwift */,
-				BE2240032B631EAD006E71A2 /* PhosphorSwift */,
+				BE8DAF252B69D4E9007B7EF3 /* PhosphorSwift */,
 			);
 			productName = PhosphorSwiftExample;
 			productReference = BE4B1AFF2B62305E0081D1E3 /* PhosphorSwiftExample.app */;
@@ -608,16 +605,12 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		BE2240032B631EAD006E71A2 /* PhosphorSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = PhosphorSwift;
-		};
 		BE4B1B312B623AC30081D1E3 /* GridStack */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = BE4B1B302B623AC30081D1E3 /* XCRemoteSwiftPackageReference "GridStack" */;
 			productName = GridStack;
 		};
-		BEA59BBA2B6255EA00D27414 /* PhosphorSwift */ = {
+		BE8DAF252B69D4E9007B7EF3 /* PhosphorSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = PhosphorSwift;
 		};

@@ -10,6 +10,8 @@ import Foundation
 @main
 enum Build {
     static func main() async throws {
+        shell("git", "submodule", "update", "--remote", "--init", "--force", "--recursive")
+        
         let icons = try await buildAssets()
         try await emitSource(icons: icons)
     }
@@ -125,4 +127,14 @@ func emitSource(icons: Set<String>) async throws {
     """
         
     try source.write(to: ICONS_SOURCE, atomically: true, encoding: .utf8)
+}
+
+@discardableResult
+func shell(_ args: String...) -> Int32 {
+    let task = Process()
+    task.launchPath = "/usr/bin/env"
+    task.arguments = args
+    task.launch()
+    task.waitUntilExit()
+    return task.terminationStatus
 }

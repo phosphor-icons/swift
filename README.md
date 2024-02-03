@@ -13,7 +13,7 @@ Phosphor is a flexible icon family for interfaces, diagrams, presentations — w
 
 ## Installation
 
-Add this repo as a new Package Dependency with `File > Add Package Dependencies...`, and enter this URL in the search bar:
+Add this repo as a new Package Dependency with `File > Add Package Dependencies...` and enter this URL in the search bar:
 
 ```
 https://github.com/phosphor-icons/swift
@@ -23,12 +23,39 @@ Choose appropriate version ranges, or use the `main` branch for the most recent 
 
 ## Usage
 
-> TODO
+All icons are present on the `Ph` enum as computed properties that return a SwiftUI `Image`, plus some special sauce. To render an icon, use the computed weight property on the enum member, i.e. `Ph.<name>.<weight>`:
+
+```swift
+import SwiftUI
+import PhosphorSwift
+
+struct ContentView: View {
+    var body: some View {
+        HStack {
+            Ph.horse.regular
+                .color(.accentColor)
+                .frame(width: 64, height: 64)
+            Ph.heart.fill
+                .color(.red)
+                .frame(width: 64, height: 64)
+            Ph.cube.duotone
+                .frame(width: 64, height: 64)
+        }   
+    }
+}
+```
+
+> **NOTE**: By default, all icon images are `.resizable()` and rendered with `.interpolation(Image.Interpolation.medium)` for scalable, antialiased icons at any size, without much overhead. The frame can be sized manually, or an icon will fit the size of its parent frame – though it is recommended to use `.aspectRatio(contentMode: .fit)` to retain the icon's original (square) aspect ratio in this case.
+
+Color can be applied with the `.color(_: Color)` modifier, which at present is simply a `View` extension which applies a `ViewModifier` to any view, causing a color mask to be applied to that view's non-transparent elements.
+
+If weight is dynamic, you can use the `.weight(_: Ph.IconWeight)` method to render a weight that is not known at compile time, or to use different weights as states (e.g. active/inactive).
 
 ## Our Related Projects
 
 - [@phosphor-icons/homepage](https://github.com/phosphor-icons/homepage) ▲ Phosphor homepage and general info
 - [@phosphor-icons/core](https://github.com/phosphor-icons/core) ▲ Phosphor icon assets and catalog
+- [@phosphor-icons/react](https://github.com/phosphor-icons/react) ▲ Phosphor icon component library for React
 - [@phosphor-icons/vue](https://github.com/phosphor-icons/vue) ▲ Phosphor icon component library for Vue
 - [@phosphor-icons/web](https://github.com/phosphor-icons/web) ▲ Phosphor icons for Vanilla JS
 - [@phosphor-icons/elm](https://github.com/phosphor-icons/phosphor-elm) ▲ Phosphor icons for Elm

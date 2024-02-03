@@ -5,7 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "PhosphorSwift",
-    platforms: [.macOS(.v10_15), .iOS(.v12), .tvOS(.v12)],
+    platforms: [.macOS(.v10_15), .iOS(.v13), .tvOS(.v13)],
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(

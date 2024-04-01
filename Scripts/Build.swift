@@ -59,7 +59,7 @@ extension String {
 
 func buildAssets() async throws -> Set<String> {
     let CORE_DIR = URL(fileURLWithPath: "./core/assets", isDirectory: true)
-    let ASSETS_DIR = URL(fileURLWithPath: "./Sources/PhosphorSwift/Assets.xcassets/SVG", isDirectory: true)
+    let ASSETS_DIR = URL(fileURLWithPath: "./Sources/PhosphorSwift/Resources/Assets.xcassets/SVG", isDirectory: true)
     
     let fm = FileManager.default
     let encoder = JSONEncoder()
@@ -83,7 +83,11 @@ func buildAssets() async throws -> Set<String> {
                 let contents = try encoder.encode(Contents.forFile(filename: "\(fileName).svg"))
                 
                 try fm.createDirectory(at: directory, withIntermediateDirectories: true, attributes: nil)
-                try fm.removeItem(at: svgURL)
+                
+                if fm.fileExists(atPath: svgURL.path()) {
+                    try fm.removeItem(at: svgURL)
+                }
+         
                 try fm.copyItem(at: fileURL, to: svgURL)
                 try contents.write(to: directory.appendingPathComponent("Contents.json"), options: .atomic)
             

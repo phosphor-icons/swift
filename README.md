@@ -45,7 +45,8 @@ struct ContentView: View {
 }
 ```
 
-> **NOTE**: By default, all icon images are `.resizable()` and rendered with `.interpolation(Image.Interpolation.medium)` for scalable, antialiased icons at any size, without much overhead. The frame can be sized manually, or an icon will fit the size of its parent frame – though it is recommended to use `.aspectRatio(contentMode: .fit)` to retain the icon's original (square) aspect ratio in this case.
+> [!NOTE]
+> By default, all icon images are `.resizable()` and rendered with `.interpolation(Image.Interpolation.medium)` for scalable, antialiased icons at any size, without much overhead. The frame can be sized manually, or an icon will fit the size of its parent frame – though it is recommended to use `.aspectRatio(contentMode: .fit)` to retain the icon's original (square) aspect ratio in this case.
 
 Color can be applied with the `.color(_: Color)` modifier, which at present is simply a `View` extension which applies a `ViewModifier` to any view, causing a color mask to be applied to that view's non-transparent elements.
 

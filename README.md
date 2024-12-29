@@ -52,6 +52,7 @@ Color can be applied with the `.color(_: Color)` modifier, which at present is s
 
 If weight is dynamic, you can use the `.weight(_: Ph.IconWeight)` method to render a weight that is not known at compile time, or to use different weights as states (e.g. active/inactive).
 
+<!-- BEGIN_LINKS -->
 ## Our Related Projects
 
 - [@phosphor-icons/homepage](https://github.com/phosphor-icons/homepage) ▲ Phosphor homepage and general info
@@ -87,3 +88,4 @@ If you've made a port of Phosphor and you want to see it here, just open a PR [h
 ## License
 
 MIT © [Phosphor Icons](https://github.com/phosphor-icons)
+<!-- END_LINKS -->

@@ -16,11 +16,13 @@ public enum SVGParser {
     /// - Parameter svgString: Raw SVG content
     /// - Returns: Parsed SVG data or nil if parsing fails
     public static func parse(_ svgString: String) -> SVGData? {
+        let defaults = extractDefaults(from: svgString)
+
         guard let viewBox = extractViewBox(from: svgString),
-              let paths = extractPaths(from: svgString) else {
+              let paths = extractPaths(from: svgString, defaults: defaults) else {
             return nil
         }
-        
+
         return SVGData(viewBox: viewBox, paths: paths)
     }
     
@@ -53,10 +55,10 @@ public enum SVGParser {
     }
     
     /// Extract all path elements from SVG
-    private static func extractPaths(from svgString: String) -> [SVGPath]? {
+    private static func extractPaths(from svgString: String, defaults: SVGDefaults) -> [SVGPath]? {
         // Match path elements with their attributes
         let pathPattern = #"<path[^>]*d="([^"]+)"[^>]*/?>"#
-        
+
         guard let regex = try? NSRegularExpression(pattern: pathPattern, options: .caseInsensitive) else {
             return nil
         }
@@ -79,16 +81,25 @@ public enum SVGParser {
             
             // Parse attributes from the path element
             let attributes = parsePathAttributes(from: fullPathElement)
-            
+
+            let fillValue = attributes["fill"] ?? defaults.fill
+            let strokeValue = attributes["stroke"] ?? defaults.stroke
+            let fillOpacity = attributes["fill-opacity"].flatMap { Double($0) }
+            let strokeOpacity = attributes["stroke-opacity"].flatMap { Double($0) }
+            let opacity = attributes["opacity"].flatMap { Double($0) }
+
             return SVGPath(
                 pathData: pathData,
                 fillRule: attributes["fill-rule"],
                 strokeWidth: attributes["stroke-width"].flatMap { Double($0) },
-                fill: attributes["fill"],
-                stroke: attributes["stroke"]
+                fill: fillValue,
+                stroke: strokeValue,
+                opacity: opacity,
+                fillOpacity: fillOpacity,
+                strokeOpacity: strokeOpacity
             )
         }
-        
+
         return paths.isEmpty ? nil : paths
     }
     
@@ -101,7 +112,10 @@ public enum SVGParser {
             "fill": #"fill="([^"]+)""#,
             "stroke": #"stroke="([^"]+)""#,
             "stroke-width": #"stroke-width="([^"]+)""#,
-            "fill-rule": #"fill-rule="([^"]+)""#
+            "fill-rule": #"fill-rule="([^"]+)""#,
+            "opacity": #"opacity="([^"]+)""#,
+            "fill-opacity": #"fill-opacity="([^"]+)""#,
+            "stroke-opacity": #"stroke-opacity="([^"]+)""#
         ]
         
         for (attribute, pattern) in attributePatterns {
@@ -113,6 +127,33 @@ public enum SVGParser {
         }
         
         return attributes
+    }
+}
+
+/// Represents default attributes inherited from the root SVG element
+struct SVGDefaults {
+    let fill: String?
+    let stroke: String?
+}
+
+private extension SVGParser {
+    static func extractDefaults(from svgString: String) -> SVGDefaults {
+        let fillPattern = #"<svg[^>]*fill="([^"]+)""#
+        let strokePattern = #"<svg[^>]*stroke="([^"]+)""#
+
+        let fill = matchFirst(in: svgString, pattern: fillPattern)
+        let stroke = matchFirst(in: svgString, pattern: strokePattern)
+
+        return SVGDefaults(fill: fill, stroke: stroke)
+    }
+
+    static func matchFirst(in string: String, pattern: String) -> String? {
+        guard let regex = try? NSRegularExpression(pattern: pattern, options: .caseInsensitive),
+              let match = regex.firstMatch(in: string, range: NSRange(string.startIndex..., in: string)),
+              let valueRange = Range(match.range(at: 1), in: string) else {
+            return nil
+        }
+        return String(string[valueRange])
     }
 }
 

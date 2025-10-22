@@ -60,22 +60,15 @@ public extension Ph {
     }
 }
 
-struct ColorBlended: ViewModifier {
-    fileprivate var color: Color
-
-    public func body(content: Content) -> some View {
-        VStack {
-            ZStack {
-                content
-                self.color.blendMode(.sourceAtop)
-            }
-            .drawingGroup(opaque: false)
-        }
+public extension Image {
+    func color(_ color: Color) -> some View {
+        self.renderingMode(.template)
+            .foregroundColor(color)
     }
 }
 
 public extension View {
     func color(_ color: Color) -> some View {
-        modifier(ColorBlended(color: color))
+        foregroundColor(color)
     }
 }

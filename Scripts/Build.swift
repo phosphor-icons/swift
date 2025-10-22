@@ -14,21 +14,21 @@ enum Build {
         
         // Extract base icons from regular directory
         let icons = try await extractBaseIcons()
-        print("📦 Extracted \(icons.count) base icons")
+        print("Extracted \(icons.count) base icons")
         
         // Copy base SVG files
         try await copyBaseSVGs(icons)
-        print("📁 Copied base SVG files")
+        print("Copied base SVG files")
         
         // Generate Icons.swift
         try await emitSource(icons: icons)
-        print("⚡ Generated source code")
+        print("Generated source code")
         
         // Clean up old weight variants
         try await cleanupOldAssets()
-        print("🧹 Cleaned up old assets")
+        print("Cleaned up old assets")
         
-        print("✅ Build complete! Build times will be dramatically faster.")
+        print("Build complete!")
     }
 }
 
@@ -78,7 +78,7 @@ func extractBaseIcons() async throws -> Set<String> {
     var baseIcons: Set<String> = Set()
     
     guard fm.fileExists(atPath: CORE_REGULAR_DIR.path) else {
-        print("⚠️  Core regular assets directory not found.")
+        print("Core regular assets directory not found.")
         throw BuildError.missingCoreAssets
     }
     
@@ -102,24 +102,68 @@ func extractBaseIcons() async throws -> Set<String> {
     return baseIcons
 }
 
-func copyBaseSVGs(_ baseIcons: Set<String>) async throws {
-    let CORE_REGULAR_DIR = URL(fileURLWithPath: "./core/assets/regular", isDirectory: true)
-    let ASSETS_DIR = URL(fileURLWithPath: "./Sources/PhosphorSwift/Resources/BaseSVGs", isDirectory: true)
-    let fm = FileManager.default
-    
-    // Create base SVGs directory
-    if fm.fileExists(atPath: ASSETS_DIR.path) {
-        try fm.removeItem(at: ASSETS_DIR)
+enum IconWeight: String, CaseIterable {
+    case regular
+    case thin
+    case light
+    case bold
+    case fill
+    case duotone
+
+    var directoryName: String { rawValue }
+
+    var filenameSuffix: String? {
+        switch self {
+        case .regular:
+            return nil
+        case .thin, .light, .bold, .fill, .duotone:
+            return "-\(rawValue)"
+        }
     }
-    try fm.createDirectory(at: ASSETS_DIR, withIntermediateDirectories: true)
-    
-    // Copy each base icon from regular directory
-    for iconName in baseIcons {
-        let sourceURL = CORE_REGULAR_DIR.appendingPathComponent("\(iconName).svg")
-        let destURL = ASSETS_DIR.appendingPathComponent("\(iconName).svg")
-        
-        if fm.fileExists(atPath: sourceURL.path) {
-            try fm.copyItem(at: sourceURL, to: destURL)
+}
+
+func copyBaseSVGs(_ baseIcons: Set<String>) async throws {
+    let svgRoot = URL(fileURLWithPath: "./Sources/PhosphorSwift/Resources/BaseSVGs", isDirectory: true)
+    let fm = FileManager.default
+
+    if fm.fileExists(atPath: svgRoot.path) {
+        try fm.removeItem(at: svgRoot)
+    }
+    try fm.createDirectory(at: svgRoot, withIntermediateDirectories: true)
+
+    var missing: [IconWeight: [String]] = [:]
+
+    for weight in IconWeight.allCases {
+        let destinationDirectory = svgRoot.appendingPathComponent(weight.rawValue, isDirectory: true)
+        try fm.createDirectory(at: destinationDirectory, withIntermediateDirectories: true)
+
+        let sourceDirectory = URL(fileURLWithPath: "./core/assets/\(weight.directoryName)", isDirectory: true)
+        guard fm.fileExists(atPath: sourceDirectory.path) else {
+            print("Missing source directory for weight \(weight.rawValue) at \(sourceDirectory.path)")
+            continue
+        }
+
+        for icon in baseIcons {
+            let filename: String
+            if let suffix = weight.filenameSuffix {
+                filename = "\(icon)\(suffix).svg"
+            } else {
+                filename = "\(icon).svg"
+            }
+            let sourceURL = sourceDirectory.appendingPathComponent(filename)
+            let destinationURL = destinationDirectory.appendingPathComponent("\(icon).svg")
+
+            if fm.fileExists(atPath: sourceURL.path) {
+                try fm.copyItem(at: sourceURL, to: destinationURL)
+            } else {
+                missing[weight, default: []].append(icon)
+            }
+        }
+    }
+
+    if !missing.isEmpty {
+        for (weight, icons) in missing {
+            print("Missing \(icons.count) icons for weight \(weight.rawValue): \(icons.sorted().joined(separator: ", "))")
         }
     }
 }

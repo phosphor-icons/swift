@@ -14,6 +14,17 @@ import UIKit
 import AppKit
 #endif
 
+/// Returns the current screen scale factor for Retina display support
+private func screenScale() -> CGFloat {
+    #if canImport(UIKit)
+    return UIScreen.main.scale
+    #elseif canImport(AppKit)
+    return NSScreen.main?.backingScaleFactor ?? 2.0
+    #else
+    return 2.0
+    #endif
+}
+
 /// High-performance SVG renderer that generates icon weights dynamically
 /// Replaces the massive bundle approach with on-demand rendering
 public final class SVGRenderer {
@@ -55,19 +66,21 @@ public final class SVGRenderer {
     ///   - weight: Visual weight to apply
     ///   - size: Target size for rendering
     ///   - color: Icon color (default: label color)
-    /// - Returns: SwiftUI Image ready for display
+    /// - Returns: SwiftUI Image ready for display, rendered at native screen resolution for crisp Retina display
     public func renderIcon(
         _ iconName: String,
         weight: Ph.IconWeight = .regular,
         size: CGSize = CGSize(width: 24, height: 24),
         color: Color = .primary
     ) -> Image {
-        
-        let cacheKey = cacheKeyFor(iconName: iconName, weight: weight, size: size, color: color)
-        
+
+        // Get screen scale for Retina support (2x, 3x displays)
+        let scale = screenScale()
+        let cacheKey = cacheKeyFor(iconName: iconName, weight: weight, size: size, scale: scale, color: color)
+
         // Check for cached rendered image
         if let cachedImage = imageCache.object(forKey: cacheKey) {
-            return makeTemplateImage(from: cachedImage, named: iconName)
+            return makeTemplateImage(from: cachedImage, named: iconName, scale: scale)
         }
 
         // Load and parse SVG data
@@ -77,20 +90,20 @@ public final class SVGRenderer {
                 viewBox: CGRect(x: 0, y: 0, width: 256, height: 256),
                 paths: [SVGPath(pathData: "M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Z", fill: "currentColor")]
             )
-            guard let fallbackImage = renderSVGToImage(fallbackSVG, size: size) else {
+            guard let fallbackImage = renderSVGToImage(fallbackSVG, size: size, scale: scale) else {
                 return Image("questionmark", bundle: .main) // Final fallback
             }
-            return makeTemplateImage(from: fallbackImage, named: "fallback")
+            return makeTemplateImage(from: fallbackImage, named: "fallback", scale: scale)
         }
 
-        guard let renderedImage = renderSVGToImage(svgData, size: size) else {
+        guard let renderedImage = renderSVGToImage(svgData, size: size, scale: scale) else {
             return Image("questionmark", bundle: .main) // Fallback
         }
 
         // Cache the rendered result
         imageCache.setObject(renderedImage, forKey: cacheKey)
 
-        return makeTemplateImage(from: renderedImage, named: iconName)
+        return makeTemplateImage(from: renderedImage, named: iconName, scale: scale)
     }
 
     /// Loads and parses SVG data from bundle, with caching
@@ -119,18 +132,20 @@ public final class SVGRenderer {
         return svgData
     }
 
-    /// Renders transformed SVG to CGImage
-    private func renderSVGToImage(_ svgData: SVGData, size: CGSize) -> CGImage? {
-        return SVGRasterizer.rasterize(svgData, to: size)
+    /// Renders transformed SVG to CGImage at the appropriate scale for Retina displays
+    private func renderSVGToImage(_ svgData: SVGData, size: CGSize, scale: CGFloat) -> CGImage? {
+        // Render at scaled pixel dimensions for crisp Retina display
+        let scaledSize = CGSize(width: size.width * scale, height: size.height * scale)
+        return SVGRasterizer.rasterize(svgData, to: scaledSize)
     }
 
-    private func makeTemplateImage(from cgImage: CGImage, named iconName: String) -> Image {
-        Image(cgImage, scale: 1.0, label: Text(iconName)).renderingMode(.template)
+    private func makeTemplateImage(from cgImage: CGImage, named iconName: String, scale: CGFloat) -> Image {
+        Image(cgImage, scale: scale, label: Text(iconName)).renderingMode(.template)
     }
 
-    private func cacheKeyFor(iconName: String, weight: Ph.IconWeight, size: CGSize, color: Color) -> NSString {
+    private func cacheKeyFor(iconName: String, weight: Ph.IconWeight, size: CGSize, scale: CGFloat, color: Color) -> NSString {
         let colorDescription = String(describing: color)
-        return "\(iconName)-\(weight.rawValue)-\(size.width)x\(size.height)-\(colorDescription)" as NSString
+        return "\(iconName)-\(weight.rawValue)-\(size.width)x\(size.height)@\(scale)x-\(colorDescription)" as NSString
     }
     
     /// Clears all caches to free memory

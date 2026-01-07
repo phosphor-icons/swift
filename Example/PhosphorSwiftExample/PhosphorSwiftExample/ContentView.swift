@@ -31,68 +31,90 @@ struct ContentView: View {
     }
 
     var body: some View {
+#if os(macOS)
         HSplitView {
-            Form {
-                Section(header: Text("Icon Style").font(.headline.smallCaps())) {
-                    Picker("Weight", selection: $selectedWeight) {
-                        Text("Regular").tag(Ph.IconWeight.regular)
-                        Text("Thin").tag(Ph.IconWeight.thin)
-                        Text("Light").tag(Ph.IconWeight.light)
-                        Text("Bold").tag(Ph.IconWeight.bold)
-                        Text("Fill").tag(Ph.IconWeight.fill)
-                        Text("Duotone").tag(Ph.IconWeight.duotone)
-                    }
-                    ColorPicker("Color", selection: $color)
-                    LabeledContent("Size") {
-                        HStack {
-                            TextField("", value: $size, formatter: NumberFormatter())
-                                .multilineTextAlignment(.trailing)
-                                .textFieldStyle(.plain)
-                                .labelsHidden()
-                                .frame(maxWidth: 60)
-                            Stepper("Value", value: $size, in: 16 ... 256, step: 4)
-                                .labelsHidden()
-                        }
-                    }
-                    LabeledContent("Columns") {
-                        HStack {
-                            TextField("", value: $cols, formatter: NumberFormatter())
-                                .multilineTextAlignment(.trailing)
-                                .textFieldStyle(.plain)
-                                .labelsHidden()
-                                .frame(maxWidth: 60)
-                            Stepper("", value: $cols, in: 1 ... 100)
-                                .labelsHidden()
-                        }
+            controlPanel
+                .frame(minWidth: 280, idealWidth: 300, maxHeight: .infinity)
+            iconGrid
+        }
+#else
+        NavigationStack {
+            VStack(spacing: 16) {
+                controlPanel
+                Divider()
+                iconGrid
+            }
+            .padding()
+            .navigationTitle("Phosphor Icons")
+        }
+#endif
+    }
+
+    private var controlPanel: some View {
+        Form {
+            Section(header: Text("Icon Style").font(.headline.smallCaps())) {
+                Picker("Weight", selection: $selectedWeight) {
+                    Text("Regular").tag(Ph.IconWeight.regular)
+                    Text("Thin").tag(Ph.IconWeight.thin)
+                    Text("Light").tag(Ph.IconWeight.light)
+                    Text("Bold").tag(Ph.IconWeight.bold)
+                    Text("Fill").tag(Ph.IconWeight.fill)
+                    Text("Duotone").tag(Ph.IconWeight.duotone)
+                }
+                ColorPicker("Color", selection: $color)
+                LabeledContent("Size") {
+                    HStack {
+                        TextField("", value: $size, formatter: NumberFormatter())
+                            .multilineTextAlignment(.trailing)
+                            .textFieldStyle(.plain)
+                            .labelsHidden()
+                            .frame(maxWidth: 60)
+                        Stepper("Value", value: $size, in: 16 ... 256, step: 4)
+                            .labelsHidden()
                     }
                 }
-
-                Section(header: Text("Rendering").font(.headline.smallCaps())) {
-                    Picker("Interpolation", selection: $interp) {
-                        Text("None").tag(Image.Interpolation.none)
-                        Text("Low").tag(Image.Interpolation.low)
-                        Text("Medium").tag(Image.Interpolation.medium)
-                        Text("High").tag(Image.Interpolation.high)
-                    }.pickerStyle(.inline)
-                    Toggle("Antialiasing", isOn: $aa)
+                LabeledContent("Columns") {
+                    HStack {
+                        TextField("", value: $cols, formatter: NumberFormatter())
+                            .multilineTextAlignment(.trailing)
+                            .textFieldStyle(.plain)
+                            .labelsHidden()
+                            .frame(maxWidth: 60)
+                        Stepper("", value: $cols, in: 1 ... 100)
+                            .labelsHidden()
+                    }
                 }
             }
-            .formStyle(.grouped)
-            .frame(minWidth: 280, idealWidth: 300, maxHeight: .infinity)
 
-            ScrollView {
-                LazyVGrid(columns: columns) {
-                    ForEach(Ph.allCases) { icon in
-                        icon.weight(selectedWeight)
-                            .interpolation(interp)
-                            .antialiased(aa)
-                            .aspectRatio(contentMode: .fit)
-                            .color(color)
-                            .help(icon.rawValue.camelCased(with: "-"))
-                    }
-                }.padding()
-            }.frame(maxWidth: .infinity)
+            Section(header: Text("Rendering").font(.headline.smallCaps())) {
+                Picker("Interpolation", selection: $interp) {
+                    Text("None").tag(Image.Interpolation.none)
+                    Text("Low").tag(Image.Interpolation.low)
+                    Text("Medium").tag(Image.Interpolation.medium)
+                    Text("High").tag(Image.Interpolation.high)
+                }
+                .pickerStyle(.inline)
+                Toggle("Antialiasing", isOn: $aa)
+            }
         }
+        .formStyle(.grouped)
+    }
+
+    private var iconGrid: some View {
+        ScrollView {
+            LazyVGrid(columns: columns) {
+                ForEach(Ph.allCases) { icon in
+                    icon.weight(selectedWeight, size: CGSize(width: CGFloat(size), height: CGFloat(size)))
+                        .interpolation(interp)
+                        .antialiased(aa)
+                        .aspectRatio(contentMode: .fit)
+                        .color(color)
+                        .help(icon.rawValue.camelCased(with: "-"))
+                }
+            }
+            .padding()
+        }
+        .frame(maxWidth: .infinity)
     }
 }
 
